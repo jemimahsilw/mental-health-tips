@@ -1,0 +1,225 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+
+.header {
+    background-color: #4CAF50;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    height: 80px;
+}
+
+.header-content {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.app-name h1 {
+    font-size: 1.8rem;
+}
+
+
+.search-bar {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.search-bar input {
+    width: 100%;
+    max-width: 400px;
+    padding: 0.7rem;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+
+.search-bar input:focus {
+    border-color: #aaa;
+    box-shadow: 0 0 5px rgba(169, 169, 169, 0.8);
+}
+
+.search-bar input:hover {
+    border-color: #aaa;
+}
+
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.notification-icon {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+
+.user-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover; 
+}
+
+.username {
+    font-size: 1rem;
+}
+
+
+.sidebar {
+    background-color: #333;
+    width: 250px;
+    padding-top: 1rem;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    height: calc(100vh - 80px);
+    color: white;
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.sidebar nav ul li {
+    padding: 0;
+    margin-bottom: 0.5rem;
+}
+
+.sidebar nav ul li a {
+    display: block;
+    padding: 1rem;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    font-size: 1.2rem;
+}
+
+.sidebar nav ul li a i {
+    font-size: 1.5rem;
+    margin-right: 15px;
+}
+
+.sidebar nav ul li a:hover,
+.sidebar nav ul li a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+
+.main-content {
+    margin-left: 250px;
+    padding: 2rem;
+    background-color: #f4f4f4;
+    flex-grow: 1;
+    height: 100%;
+    overflow-y: auto;
+    margin-top: 80px;
+}
+
+
+
+.dashboard-cards {
+    display: flex;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.card {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    border-radius: 15px;
+    width: 400px;
+    height: 150px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card-left {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-left h2 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.card-left p {
+    margin: 10px 0 0;
+    font-size: 1.5rem;
+}
+
+.card-right {
+    font-size: 5rem;
+    opacity: 0.3;
+}
+
+
+
+@media (max-width: 768px) {
+   
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .app-name h1, .search-bar, .user-info {
+        width: 100%;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    .search-bar {
+        justify-content: flex-start;
+    }
+
+   
+    .sidebar {
+        width: 200px;
+    }
+
+   
+    .main-content {
+        margin-left: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+   
+    .sidebar {
+        display: none;
+    }
+
+    .main-content {
+        margin-left: 0;
+        padding: 1rem;
+    }
+}
