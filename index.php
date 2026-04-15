@@ -1,6 +1,6 @@
 <?php
 session_start();
-include 'includes/db.php'; // Include the database connection
+include 'db.php'; // Include the database connection
 
 // Check if the user is already logged in
 if (isset($_SESSION['user_id'])) {
@@ -64,7 +64,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 </head>
 <body>

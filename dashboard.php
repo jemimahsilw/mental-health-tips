@@ -5,7 +5,7 @@ if (session_status() === PHP_SESSION_NONE) {
 }
 
 
-include '../includes/db.php';
+include 'db.php';
 
 
 try {

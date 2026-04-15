@@ -22,8 +22,8 @@ $currentPage = basename($_SERVER['PHP_SELF'], ".php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard</title>
     <!-- Include Font Awesome for icons -->
-    <link rel="stylesheet" href="https:
-    <link rel="stylesheet" href="../assets/css/admin_base.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="admin_base.css">
 </head>
 <body>
     <!-- Header -->
@@ -42,7 +42,7 @@ $currentPage = basename($_SERVER['PHP_SELF'], ".php");
             <!-- User Info -->
             <div class="user-info">
                 <span class="notification-icon">🔔</span>
-                <img class="user-image" src="../assets/img/admin_profile.jpg" alt="User Image">
+                <img class="user-image" src="admin_profile.jpg" alt="User Image">
                 <span class="username">
                     <?php 
                         
